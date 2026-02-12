@@ -14,7 +14,7 @@ defmodule MonopolyWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/monopoly", MonopolyWeb do
+  scope "/", MonopolyWeb do
     pipe_through :browser
 
     # get "/", PageController, :home

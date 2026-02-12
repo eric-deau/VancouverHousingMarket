@@ -11,7 +11,7 @@ defmodule MonopolyWeb.Endpoint do
     same_site: "Lax"
   ]
 
-  socket "/monopoly/live", Phoenix.LiveView.Socket,
+  socket "/live", Phoenix.LiveView.Socket,
     websocket: [connect_info: [session: @session_options]],
     longpoll: [connect_info: [session: @session_options]]
 
@@ -20,7 +20,7 @@ defmodule MonopolyWeb.Endpoint do
   # You should set gzip to true if you are running phx.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/monopoly",
+    at: "/",
     from: :monopoly,
     gzip: false,
     only: MonopolyWeb.static_paths()
